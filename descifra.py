@@ -128,7 +128,7 @@ some_q = False
 some_fails = False
 for i in translated_msg:
     if found_q:
-        if i == "u":
+        if i != "u":
             some_fails = True
             print("No todas las Q van seguidas de 1 U")
         found_q = False
