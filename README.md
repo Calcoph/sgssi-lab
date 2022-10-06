@@ -17,16 +17,10 @@ carpeta
 ## Descripción
 Dada una carpeta llena de archivos y un hash (md5), encuentra el archivo al que le corresponde ese hash.
 ## Utilizamiento
-1. Poner la carpeta con archivos al mismo nivel que descifra.py. Se tiene que llamar "archivos". De esta manera:
-```
-carpeta
-├─archivos
-│ ├─archivo1
-│ ├─archivo2
-│ ├─archivo3
-│ │ ...
-│ └─archivon
-└─encuentra_hash.py
-```
-2. Cambiar el HASH en la línea 6 `HASH = ...`
-3. Si se quiere usar otro algoritmo, hay que cambiar `HASH_LENGTH` (línea 5) y `hash = hashlib.<ALGORITMO>(archivo).digest()` (línea 11)
+`python3 <nombre de archivo/carpeta> <hash>`
+
+El hash debe estar en formato hexadecimal.
+
+Ejemplos válidos:
+* `python3 encuentra_hash.py archivos 0xe5ed313192776744b9b93b1320b5e268`
+* `python3 encuentra_hash.py imagen26.jpg 0xe5ed313192776744b9b93b1320b5e268`
