@@ -1,4 +1,5 @@
 # Aviso: el código es bastante ineficiente, pero cumple su función
+import sys
 from typing import Tuple
 
 def get_freq_vec() -> list[str]:
@@ -105,7 +106,11 @@ def find_index(l: list[Tuple[str, int]], char: str) -> int:
             return index
 
 freq_table = get_freq_vec()
-with open("msg.txt", "r") as f:
+if len(sys.argv) != 2:
+    print("Este comando requiere 1 argumento.")
+    print("Se usa así: python3 descifra.py msg.txt")
+    exit()
+with open(sys.argv[1], "r") as f:
     msg = f.read()
 char_count = get_msg_charcount(msg)
 translated_chars = list("abcdefghijklmnopqrstuvwxyz")

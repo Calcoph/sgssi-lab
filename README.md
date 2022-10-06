@@ -4,12 +4,8 @@ Este repositorio contiene 2 programas. descifra.py y encuentra_hash.py
 ## Descripción
 Herramienta que ayuda a descifrar mensajes cifrados con un métodod de diccionario (cada letra se corresponde a otra letra)
 ## Utilizamiento
-1. poner el mensaje en msg.txt al mismo nivel que descifra.py. De esta manera:
-```
-carpeta
-├─msg.txt
-└─descifra.py
-```
+1. El comando se utiliza así: `python3 descifra.py <nombre de archivo>`
+    * Ejemplo: `python3 descifra.py msg.txt`
 2. Cambiar `translated_chars` (en la línea 111) `translated_chars = list("...")` para definir los caracteres que se han cifrado.
 3. Ejecutar el código e ir cambiando `found_chars` en la línea 41 `found_chars = {...}` (es un diccionario, no un set), a medida que se van descubriendo a que letra se corresponde cada letra.
 

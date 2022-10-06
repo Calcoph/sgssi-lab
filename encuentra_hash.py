@@ -9,14 +9,15 @@ if len(args) != 3:
     print(args)
     print("Este comando necesita 1 solo argumento, que es el hash que se desea buscar.")
     print("Se usa así: python3 encuentra_hash.py archivos 0xe5ed313192776744b9b93b1320b5e268")
+    exit()
 else:
     NOMBRE_CARPETA = args[1]
     HASH = int(args[2], base=16).to_bytes(HASH_LENGTH//8, "big")
 if os.path.isfile(NOMBRE_CARPETA):
-    print("FILE")
+    print(f"Comparando hash de {NOMBRE_CARPETA}")
     archivos = [NOMBRE_CARPETA]
 elif os.path.isdir(NOMBRE_CARPETA):
-    print("DIR")
+    print(f"Buscando en la carpeta {NOMBRE_CARPETA}")
     entradas = os.listdir(NOMBRE_CARPETA)
     archivos = []
     for archivo in entradas:
