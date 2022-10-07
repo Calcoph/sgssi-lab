@@ -21,4 +21,4 @@ Ejemplos válidos:
 * `python3 encuentra_hash.py archivos 0xe5ed313192776744b9b93b1320b5e268`
 * `python3 encuentra_hash.py imagen26.jpg 0xe5ed313192776744b9b93b1320b5e268`
 
-Cambio para tener firmado
+Cambio para tener firmado1
